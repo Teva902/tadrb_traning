@@ -1,0 +1,132 @@
+import { StyleSheet, Dimensions } from 'react-native';
+const { width, height } = Dimensions.get('window');
+const otpStyle = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#FFFFFF',
+  },
+  header: {
+    height: height * 0.3,
+    backgroundColor: '#8B5CF6',
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  logoContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  logoOuterCircle: {
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 6,
+    elevation: 8,
+  },
+  logoInnerCircle: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    backgroundColor: '#FFFFFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  logoTextMain: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#FF6B35',
+    marginBottom: 2,
+  },
+  logoTextArabic: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#8B5CF6',
+  },
+  content: {
+    flex: 1,
+    paddingHorizontal: 30,
+    paddingTop: 40,
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#1F2937',
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  subtitle: {
+    fontSize: 14,
+    color: '#6B7280',
+    textAlign: 'center',
+    lineHeight: 22,
+    marginBottom: 40,
+  },
+  codeContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '80%',
+    marginBottom: 60,
+  },
+  codeInput: {
+    width: 50,
+    height: 50,
+    borderRadius: 12,
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#FFFFFF',
+  },
+  codeInputFilled: {
+    backgroundColor: '#8B5CF6',
+    borderWidth: 2,
+    borderColor: '#8B5CF6',
+  },
+  codeInputEmpty: {
+    backgroundColor: '#F3F4F6',
+    borderWidth: 2,
+    borderColor: '#E5E7EB',
+    color: '#1F2937',
+  },
+  loginButton: {
+    backgroundColor: '#8B5CF6',
+    borderRadius: 15,
+    height: 55,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    shadowColor: '#8B5CF6',
+    marginTop: 100,
+
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 6,
+    elevation: 8,
+  },
+  loginButtonText: {
+    color: '#FFFFFF',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  bottomIndicator: {
+    width: 134,
+    height: 5,
+    backgroundColor: '#000000',
+    borderRadius: 2.5,
+    alignSelf: 'center',
+    marginBottom: 15,
+  },
+});
+export default otpStyle;
