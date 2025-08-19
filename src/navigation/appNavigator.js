@@ -2,11 +2,9 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-
-;
 import LoginScreen from '../auth/LoginScreen';
 import OTPScreen from '../screens/otpScreen';
-
+import HomeScreen from '../screens/homeScreen';
 const Stack = createNativeStackNavigator();
 
 const AppNavigator = () => {
@@ -18,6 +16,7 @@ const AppNavigator = () => {
       >
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="OTP" component={OTPScreen} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

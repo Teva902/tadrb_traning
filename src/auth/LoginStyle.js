@@ -1,54 +1,75 @@
 import { StyleSheet, Dimensions } from 'react-native';
+
 const { width, height } = Dimensions.get('window');
+
 const loginStyle = StyleSheet.create({
+  // إضافة ستايل للـ gradient container
+  gradientContainer: {
+    flex: 1,
+  },
+  scrollViewContent: {
+    flexGrow: 1,
+    minHeight: height, // ضمان أن المحتوى يغطي الشاشة كاملة
+  },
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: 'transparent', // جعل الخلفية شفافة لإظهار الـ gradient
   },
   header: {
-    height: height * 0.4,
-    backgroundColor: '#8014DC',
+    height: height * 0.35, // تقليل ارتفاع الـ header قليلاً
+    backgroundColor: 'transparent', // جعل الخلفية شفافة
     paddingTop: 10,
     borderBottomLeftRadius: 30,
   },
-
   signalIcon: {
     color: '#FFFFFF',
     fontSize: 16,
     marginRight: 5,
   },
-
   logoContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  logoCircle: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    backgroundColor: '#8014DC',
-    justifyContent: 'center',
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 6,
-    elevation: 8,
-  },
+  // logoCircle: {
+  //   width: 100,
+  //   height: 100,
+  //   borderRadius: 50,
+  //   backgroundColor: 'rgba(255, 255, 255, 0.2)', // جعل الخلفية شبه شفافة
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   shadowColor: '#000',
+  //   shadowOffset: {
+  //     width: 0,
+  //     height: 4,
+  //   },
+  //   shadowOpacity: 0.3,
+  //   shadowRadius: 6,
+  //   elevation: 8,
+  // },
   logoText: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#8B5CF6',
+    color: '#FFFFFF', // تغيير لون النص إلى أبيض
+  },
+  // logoWrapper: {
+  //   backgroundColor: '#fff',
+  //   borderRadius: 60,
+  //   padding: 15,
+  // },
+  logo: {
+    width: 150,
+    height: 150,
   },
   content: {
     flex: 1,
     paddingHorizontal: 30,
     paddingTop: 40,
-    borderTopRightRadius: 20,
+    borderTopLeftRadius: 50,
+    backgroundColor: '#FFFFFF', // خلفية بيضاء كاملة
+    marginTop: 30, // رفع المحتوى لأعلى قليلاً
+    paddingBottom: 100, // إضافة مسافة كبيرة في الأسفل
+    minHeight: height * 0.25, // ضمان ارتفاع كافي
   },
   title: {
     fontSize: 28,
@@ -58,8 +79,8 @@ const loginStyle = StyleSheet.create({
     marginBottom: 40,
   },
   inputLabel: {
-    fontSize: 16,
-    color: '#6B7280',
+    fontSize: 14,
+    color: 'black',
     marginBottom: 10,
     textAlign: 'right',
   },
@@ -88,13 +109,13 @@ const loginStyle = StyleSheet.create({
     padding: 5,
   },
   loginButton: {
-    backgroundColor: '#8B5CF6',
+    backgroundColor: '#8014DC',
     borderRadius: 15,
     height: 55,
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 20,
-    shadowColor: '#8B5CF6',
+    shadowColor: '#8014DC',
     shadowOffset: {
       width: 0,
       height: 4,
@@ -105,7 +126,7 @@ const loginStyle = StyleSheet.create({
   },
   loginButtonText: {
     color: '#FFFFFF',
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: 'bold',
   },
   forgotPassword: {
@@ -113,8 +134,9 @@ const loginStyle = StyleSheet.create({
     marginTop: 25,
   },
   forgotPasswordText: {
-    color: '#8B5CF6',
-    fontSize: 16,
+    color: '#425CC5',
+    fontSize: 14,
+    fontWeight: 'regular',
   },
   bottomIndicator: {
     width: 134,
@@ -124,14 +146,6 @@ const loginStyle = StyleSheet.create({
     alignSelf: 'center',
     marginBottom: 15,
   },
-  logoWrapper: {
-    backgroundColor: '#fff',
-    borderRadius: 60,
-    padding: 15,
-  },
-  logo: {
-    width: 100,
-    height: 100,
-  },
 });
+
 export default loginStyle;
